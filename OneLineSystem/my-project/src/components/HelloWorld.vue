@@ -46,10 +46,20 @@ export default {
         }]
       }
       myEchart.setOption(option)
+    },
+    buhui () {
+        this.$axios({
+            method:'post',
+            url:'http://localhost:8080/index',
+            data:''
+        }).then((response) =>{          //这里使用了ES6的语法
+            console.log(response)       //请求成功返回的数据
+        })
     }
   },
   mounted () {
-    this.drawChart()
+    this.drawChart();
+    this.buhui()
   }
 }
 

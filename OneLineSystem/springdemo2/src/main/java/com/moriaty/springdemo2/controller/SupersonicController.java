@@ -12,7 +12,7 @@ import com.moriaty.springdemo2.service.GoodsService;
 import com.moriaty.springdemo2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//加上此注解之后支持跨域请求
+@CrossOrigin
 @Controller
 public class SupersonicController {
     private static final String QR_CODE_IMAGE_PATH = "D:/tempWorkpls/springdemo2/tmp/MyQRCode.png";
